@@ -2,6 +2,7 @@ import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.26/vue
 
 const url = 'https://vue3-course-api.hexschool.io/v2';
 const myPath = 'llaurrrraa-hexschool';
+const Swal = SweetAlert;
 
 createApp({
     data(){
@@ -23,7 +24,12 @@ createApp({
                     window.location = 'products.html';
                 })
                 .catch(err => {
-                    console.log(err);
+                    Swal.fire({
+                        title: 'Error!',
+                        text: `${err.data.message}`,
+                        icon: 'error',
+                        confirmButtonText: '返回'
+                      });
                 })
         },
 
