@@ -24,13 +24,12 @@ createApp({
                     window.location = 'products.html';
                 })
                 .catch(err => {
-                    alert('error');
-//                     Swal.fire({
-//                         title: 'Error!',
-//                         text: `${err.data.message}`,
-//                         icon: 'error',
-//                         confirmButtonText: '返回'
-//                       });
+                    Swal.fire({
+                        title: 'Error!',
+                        text: `${err.data.message}`,
+                        icon: 'error',
+                        confirmButtonText: '返回'
+                      });
                 })
         },
 
