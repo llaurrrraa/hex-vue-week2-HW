@@ -6,6 +6,10 @@
   body {
     background-color: rgba(0, 0, 0, 0.1);
     #app {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       .container {
         max-width: 80%;
         background: rgba(255, 255, 255, 1);
